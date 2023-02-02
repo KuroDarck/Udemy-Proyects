@@ -1,0 +1,28 @@
+
+  html {
+    font-size: 90%;
+  }
+  
+  body {
+    width: 100%;
+    height: 74rem;
+    background: $bodybackground;
+    background-size: cover;
+    
+
+  }
+  
+  header {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    border: 0.5px solid rgba(255, 255, 0, 0.918);
+    background-image:  $headerbackground;
+    background-size: cover;
+  }
+  
+  main {
+    width: 90%;
+    margin: 2% 5%;
+    padding: 0px;
+  }
