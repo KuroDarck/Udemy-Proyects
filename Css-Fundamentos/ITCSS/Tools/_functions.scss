@@ -1,0 +1,14 @@
+  /* Definición del mixin para formato del titulo */
+  @mixin FormatoDetitulo {
+    font-size: var($generalTitle);
+    font-family: var($fuenteTextorTitle1);
+    text-align: center;
+  }
+
+/* Definición del mixin para formato del texto Generañ */
+@mixin FormatoDeparrafo {
+    font-size: var($generalText);
+    font-family: var($fuenteTextorTitle3);
+    text-align: justify; 
+    line-height: 5px;
+  }

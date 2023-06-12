@@ -1,22 +1,42 @@
                 *Orden Del contenido De Las Carpetas de ITCSS*
 
-1. Settings: contiene las variables de estilo globales, como los colores y las fuentes. 
-No se deben escribir estilos CSS aquí.
+El modelo ITCSS (Inverted Triangle CSS) es una metodología de organización de estilos CSS 
+que propone una estructura en forma de triángulo invertido, donde los estilos más generales 
+y de alto nivel se encuentran en la parte superior, y los estilos más específicos 
+y de bajo nivel se encuentran en la parte inferior.
 
-2. Tools: contiene mixins y funciones que ayudan a escribir estilos CSS.
-          Por ejemplo, un mixin que establece el tamaño de fuente y la altura de línea juntos.
-
-3. Generic: contiene estilos CSS genéricos que se aplican a todo el sitio web.
-         Por ejemplo, estilos para reiniciar los márgenes y las almohadillas.
-
-4. Elements: contiene estilos para elementos HTML básicos, como botones y enlaces.
-             Estos estilos se aplican a elementos individuales en todo el sitio web.
-
-5. Objects: contiene estilos para objetos reutilizables, como grillas y bloques de contenido.
-            Estos estilos se aplican a grupos de elementos que tienen un propósito similar.
-
-6. Components: contiene estilos para componentes de interfaz de usuario que son específicos del sitio web. 
-               Por ejemplo, estilos para un carrusel de imágenes o un menú de navegación.
-
-7. Utilities: contiene estilos de utilidad que se aplican en cualquier lugar del sitio web. 
-              Por ejemplo, una clase de utilidad que establece el margen inferior de un elemento en cero.
+Aquí hay algunos ejemplos de utilidades indispensables que podrías utilizar 
+en cada una de las capas del modelo ITCSS:
+                
+    1. Settings:
+                   - Variables globales: Define variables para colores, tamaños de fuente, espaciado, etc.
+                   - Configuraciones de breakpoints: Define los puntos de quiebre para los diseños responsivos.
+                
+    2. Tools:
+                   - Mixins: Crea mixins reutilizables para estilos comunes, como fuentes, animaciones, etc.
+                   - Funciones: Utiliza funciones para realizar cálculos y manipulación de valores CSS.
+                
+    3. Generic:
+                   - Normalize/Reset: Aplica estilos básicos de normalización o reseteo para garantizar una base consistente en todos los navegadores.
+                   - Estilos base: Define estilos generales para elementos HTML básicos, como `body`, `p`, `h1`, etc.
+                
+    4. Elements:
+                   - Estilos de etiquetas HTML: Aplica estilos específicos para elementos HTML, como enlaces (`a`), imágenes (`img`), listas (`ul`, `ol`), etc.
+                   - Estilos de componentes básicos: Define estilos para componentes reutilizables básicos, como botones, formularios, etc.
+                
+    5. Objects:
+                   - Grid: Define estilos para un sistema de grillas responsivo.
+                   - Contenedores: Establece estilos para contenedores generales, como encabezados, pies de página, barras laterales, etc.
+                
+    6. Components:
+                   - Estilos de componentes complejos: Define estilos para componentes más complejos, como carruseles, menús desplegables, etc.
+                   - Estilos de módulos de interfaz de usuario: Aplica estilos para componentes de interfaz de usuario más pequeños, como cajas de diálogo, tarjetas, etc.
+                
+    7. Trumps:
+                   - Clases utilitarias: Crea clases utilitarias para realizar ajustes rápidos y específicos en estilos existentes, como márgenes, rellenos, alineaciones, etc.
+                   - Clases de estado: Define clases para aplicar estilos de estado, como `.active`, `.disabled`, etc.
+                
+Estos son solo ejemplos de utilidades que podrías utilizar en cada capa del modelo ITCSS. 
+La idea es que los estilos se organicen de manera jerárquica, comenzando desde lo más general 
+y avanzando hacia lo más específico, lo que facilita la legibilidad, el mantenimiento y 
+la reutilización de los estilos en un proyecto web.

@@ -1,4 +1,17 @@
+// Normalize/Reset
+@import 'Normalize.css';
+
+// Estilos base
+
 *{
     list-style: none;
     text-decoration: none;
 }
+
+body{
+  width: var($maximoAncho);
+  height: var($maximoAlto);
+
+}
+
+

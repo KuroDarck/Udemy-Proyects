@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coda&display=swap");
+/*las fuente del html en general*/
+/*los Colores del html en general*/
+/*los Margenes del html en general*/
+/*las Dimensiones del html en general*/
+/*Background del body*/
+/*Background del header*/
+/* Definición del mixin para formato del titulo */
+/* Definición del mixin para formato del texto Generañ */
+@import 'Normalize.css';
+@import '../ITCSS/Elements/element_index.css';
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: var(100%);
+  height: var(100%);
+}
+
+header {
+  width: var(100%);
+  height: var(150px);
+  background: var(linear-gradient(280deg, rgba(234, 0, 255, 0.37), rgba(38, 203, 232, 0.479)), url(../../img\c up-of-coffee-1280537_1920.jpg));
+}
+
+footer {
+  width: var(100%);
+}
+
+h1 {
+  font-size: var(16px);
+  font-family: var("Allerta Stencil", sans-serif);
+  text-align: center;
+}
+
+p {
+  font-size: var(12px);
+  font-family: var("Coda", cursive);
+  text-align: justify;
+  line-height: 5px;
+}
+
+a {
+  color: #51FF00;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* .margin-top {
+    margin-top: $espaciado;
+  }
+
+  .padding-right {
+    padding-right: $espaciado;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  // Clases de estado
+  .active {
+    background-color: #00ff00;
+  }
+
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  */
+
+/*# sourceMappingURL=index.css.map */

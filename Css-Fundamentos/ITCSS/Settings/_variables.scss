@@ -1,12 +1,41 @@
-/*Tama{o de la fuente del html en general*/
- $htmlfontzize:90%;
+// Importacion de las fuentes de componentes 
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
- /*Background del body*/
- $bodybackground: linear-gradient(220deg, rgba(232, 236, 19, 0.6), rgba(225, 0, 255, 0.6), rgba(0, 255, 85, 0.6)),url(../img/tomb-raider-3838414_1920.jpg);
-  /*Background del header*/
- $headerbackground:linear-gradient(280deg, rgba(234, 0, 255, 0.37), rgba(38, 203, 232, 0.479)),url(../img/cup-of-coffee-1280537_1920.jpg);
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
 
- $headerborder:0.5px solid rgba(255, 255, 0, 0.918);
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
 
- $ectionbackground: rgba(255, 0, 157, 0.4);
+/*las fuente del html en general*/
+$generalTitle:16px;
+$generalText:12px;
 
+$fuenteTextorTitle1:'Allerta Stencil', sans-serif;
+$fuenteTextorTitle2:'Cabin Sketch', cursive;
+$fuenteTextorTitle3:'Coda', cursive;
+
+/*los Colores del html en general*/
+
+$colorTitle:#000000;
+
+$colorText:#51FF00;
+
+/*los Margenes del html en general*/
+$espaciadode10: 10px;
+
+
+/*las Dimensiones del html en general*/
+$maximoAncho:100%;
+$maximoAlto:100%;
+$headerAltura:150px;
+
+
+/*Background del body*/
+$bodybackground: linear-gradient(220deg, rgba(232, 236, 19, 0.6), rgba(225, 0, 255, 0.6), rgba(0, 255, 85, 0.6)),url(../../img/tomb-raider-3838414_1920.jpg);
+/*Background del header*/
+$headerbackground:linear-gradient(280deg, rgba(234, 0, 255, 0.37), rgba(38, 203, 232, 0.479)),url(../../img\cup-of-coffee-1280537_1920.jpg);
+
+// Configuraciones de breakpoints
+$breakpoint-pequeno: 480px;
+$breakpoint-mediano: 768px;
+$breakpoint-grande: 980px;
+$breakpoint-extraGrande: 1168px;

@@ -1,0 +1,27 @@
+// Estilos de etiquetas HTML
+header{
+  width: var($maximoAncho);
+  height: var($headerAltura);
+  background: var($headerbackground);
+}
+
+footer{
+  width: var($maximoAncho);
+}
+
+h1{
+  @include FormatoDetitulo;
+}
+
+p{
+  @include FormatoDeparrafo;
+}
+
+a{
+    color: $colorText;
+    text-decoration: none;
+}
+
+img{
+    max-width: $maximoAncho;
+}

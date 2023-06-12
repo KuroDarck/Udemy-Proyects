@@ -1,0 +1,9 @@
+@import '../ITCSS/Settings/variables';
+@import '../ITCSS/Tools/functions';
+@import '../ITCSS/Generic/generic';
+@import '../ITCSS/Elements/elements';
+@import '../ITCSS/Objects/objects/_contactenos.scss';
+@import '../ITCSS/Componets/componets';
+@import '../ITCSS/Utilities/utilities';
+
+// Comando de Compilacion : sass --watch scss/main.scss:css/index.css
