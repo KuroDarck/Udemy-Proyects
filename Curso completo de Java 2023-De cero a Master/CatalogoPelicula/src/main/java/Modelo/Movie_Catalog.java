@@ -1,6 +1,7 @@
 package Modelo;
 
-// Aggregation, Sampling and Search Interface
+/** Aggregation, Sampling and Search Interface*/
+
 public interface Movie_Catalog {
 
     /**

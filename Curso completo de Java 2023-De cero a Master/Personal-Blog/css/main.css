@@ -1,0 +1,374 @@
+/* Roboto Slab 400, 700
+   Roboto 400 500 700 900
+   Roboto Mono 400 500 700
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap");
+
+/* 
+   Importando Normalize para formatear estilos de los navegadores
+*/
+@import url("Normalize.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo del body*/
+.body-home {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 24px;
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo del Header*/
+.header {
+  width: 100%;
+  height: 140px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo del Header > social*/
+.social {
+  background-color: rgb(255, 0, 0);
+  width: 100%;
+  height: 50px;
+  display: grid;
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo del social > social_icon*/
+.social-icon {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-self: end;
+}
+
+/*Comienzo del social_icon > a*/
+.social-icon a {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+}
+
+/*Comienzo del social_icon > a:hover*/
+.social-icon a:hover {
+  color: rgb(0, 38, 255);
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo del Header > nav*/
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 85px;
+}
+
+/*Comienzo del nav > logo*/
+.nav-logo {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/*Comienzo del nav > link*/
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  margin-right: 50px;
+}
+
+/*Comienzo del link > a*/
+.nav-link a {
+  color: rgba(0, 0, 0, 0.952);
+  text-decoration: underline;
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo del Main*/
+
+.main-home {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 90%;
+  background-image: url("../img/cover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Comienzo del main > main-container*/
+
+.main-container {
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 350px;
+  margin-top: 80px;
+}
+
+/*Comienzo del main-container > text*/
+.main-container_text {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 255);
+}
+
+/*Comienzo del main-container > button*/
+.main-container_button {
+  background-color: rgb(255, 0, 0);
+  display: inline-block;
+  padding: 10px 20px;
+  height: 45px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.main-container_button:hover {
+  background-color: rgb(214, 50, 50);
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo de la pagina blog-content-1 > main*/
+.main-blogs {
+  display: grid;
+}
+
+/*Continuación del main > notice*/
+.notice {
+  background-color: #e6e9ed;
+  padding: 10px 80px 40px;
+}
+
+/*Continuación del notice > notice-content*/
+.notice-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+}
+
+/*Continuación del notice-content > img*/
+.notice-content img {
+  grid-column: 1;
+  width: 80%;
+  display: inline-block;
+  margin: 10px 0px;
+}
+
+/*Continuación del  notice-content > info-notice*/
+.info-notice {
+  grid-column: 2;
+}
+
+/*Continuación del info-notice > h2*/
+.info-notice h2 {
+  margin-top: 20px;
+}
+
+/*Continuación del info-notice > p*/
+.info-notice p {
+  margin: 30px 0px;
+}
+
+/*Blogs button General*/
+.blogs-btn {
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.blogs-btn:hover {
+  background-color: rgb(243, 50, 50);
+  color: rgb(255, 255, 255);
+}
+
+/*Continuación del Main > Post*/
+.posts {
+  padding: 0px 80px 40px;
+}
+/*Continuación del Post > posts-subtitulo*/
+.posts-subtitulo {
+  text-align: center;
+  padding: 20px 0px;
+  border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+/*Continuación del Post-blog*/
+.post-blog {
+  display: inline-block;
+  padding: 15px;
+  max-width: 32%;
+  margin-bottom: 50px;
+}
+/*Continuación del Post-blog > img*/
+.post-blog img {
+  width: 100%;
+}
+/*Continuación del Post-blog > h4*/
+.post-blog h4 {
+  margin: 20px 0px;
+}
+/*Continuación del Post-blog > p*/
+.post-blog p {
+  margin-bottom: 35px;
+  font-size: 20px;
+}
+/*Footer*/
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(34, 39, 45);
+  border-top: 30px solid rgb(230, 22, 46);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Continuación del Footer > a*/
+footer a {
+  color: #ffffff;
+}
+
+/*=============================================================================================================================================================================*/
+/*Comienzo de la pagina blog-content-2 > main*/
+.main-blog {
+  padding: 0px 80px 40px;
+}
+/*Continuación del main-blog > main-blog__content img*/
+.main-blog__content img {
+  display: inline-block;
+  padding: 0px 50px 40px;
+  width: 100%;
+}
+/*Continuación del main-blog__content > main-blog__content article*/
+.blog-content__article {
+  padding: 0px 80px 40px;
+}
+
+/*Continuación del main-blog__content article > blog-subtitulo*/
+.blog-subtitulo {
+  padding: 20px 0px;
+  border-bottom: 2px solid rgb(255, 0, 0);
+}
+/*Continuación del main-blog__content article > h1*/
+.blog-content__article h1 {
+  margin: 20px 0px;
+  font-size: 35px;
+}
+/*Continuación del main-blog__content article > h2*/
+.blog-content__article h2 {
+  margin: 20px 0px;
+  font-size: 30px;
+}
+
+.blog-content__article p {
+  font-size: 20px;
+}
+/*Continuación del body > secction-contact*/
+.secction-contact {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px 50px;
+}
+/*Continuación del secction-contact > contact*/
+.contact {
+  display: flex;
+  margin: 20px 0px 20px 20px;
+}
+/*Continuación del contact > img*/
+.contact img {
+  width: 130px;
+  height: 130px;
+  padding: 15px;
+  display: inline-block;
+}
+/*Continuación del contact > contact-info*/
+.contact-info {
+  padding: 20px 0px;
+  width: 300px;
+}
+/*Continuación del contact-info > a*/
+.contact-info a {
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(255, 0, 0);
+  padding-bottom: 5px;
+}
+
+.contact-info a:hover {
+  color: rgb(0, 0, 255);
+}
+/*Continuación del contact-info > p*/
+.contact-info p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+/*=============================================================================================================================================================================*/
+/*Comienzo de la pagina profile > main*/
+.profile {
+  padding: 70px 100px;
+  background-color: rgb(230, 233, 237);
+  margin-bottom: 5px;
+  display: flex;
+}
+/*Continuación del Profile > img*/
+.profile img {
+  width: 320px;
+  margin-right: 30px;
+}
+/*Continuación del Profile-info > p*/
+.profile-info p {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: justify;
+}
+/*Continuación del Profile > diploma-container*/
+.diploma-container {
+  padding: 0px 80px 40px;
+}
+
+.profile-subtitulo {
+  padding: 20px 0px;
+  border-bottom: 2px solid rgb(255, 0, 0);
+  text-align: center;
+}
+
+.certifies {
+  display: inline-block;
+  padding: 15px;
+  max-width: 32%;
+  margin-bottom: 50px;
+}
+
+/*Continuación del Profile > img*/
+.certifies img {
+  width: 100%;
+  height: 200px;
+}
+/*Continuación del Profile > h4*/
+.certifies h4 {
+  margin: 30px 0px;
+  font-size: 20px;
+}
