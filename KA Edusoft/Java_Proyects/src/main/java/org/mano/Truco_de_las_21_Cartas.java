@@ -60,12 +60,12 @@ public class Truco_de_las_21_Cartas {
         }
         do {
             System.out.println("\n------------------------------------------------");
-            System.out.println("En que grupo esta tu carta [1, 2, 3]:   ");
+            System.out.print("En que grupo esta tu carta [1, 2, 3]:  ");
             System.out.println("------------------------------------------------");
             Scanner scanner = new Scanner(System.in);
             int tuElexion = scanner.nextInt();
-            while ((tuElexion > 3) || (tuElexion < 1)) {//comprobando que la seleccion de colunnas este en el rango permitido de 1 a 3
-                System.out.println("En que grupo esta tu carta [1, 2, 3]");
+            while ((tuElexion > 3) || (tuElexion < 1) ) {//comprobando que la seleccion de colunnas este en el rango permitido de 1 a 3
+                System.out.print("En que grupo esta tu carta [1, 2, 3]:  ");
                 tuElexion = scanner.nextInt();
             }
 //devolviendo todos los maso de 7 cartas al deck
