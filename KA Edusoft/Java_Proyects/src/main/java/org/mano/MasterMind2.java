@@ -42,13 +42,14 @@ public class MasterMind2 {
         System.out.println("----------------------------------------------------------------\n");
 
         do {
+            System.out.println(codigo);
             System.out.println("Intento: " + (contador + 1) + " de 10 intentos para adivinar el código.");
             System.out.print("Codigo >>> ");
             codgoIngresado = sc.nextLine();
             regular = 0;
             acierto = 0;
-            for (int i = 0; i < LARGO_CODIGO; i++) {
-                comparado[i] = false;
+            for (boolean b : comparado) {
+                b=false;
             }
             //bucle comparador de código con la entrada del usuario
             for (int i = 0; i < LARGO_CODIGO; i++) {
@@ -70,7 +71,7 @@ public class MasterMind2 {
             contador++;
         } while (contador < MAX_INTENTOS);
 
-        System.out.println("!Oh no, Perdiste  el Codigo era: " + codigo[0]+codigo[1]+codigo[2]+codigo[3]);
+        System.out.println("!Oh no, Perdiste  el Codigo era: " + codigo[0] + codigo[1] + codigo[2] + codigo[3]);
 
     }
 

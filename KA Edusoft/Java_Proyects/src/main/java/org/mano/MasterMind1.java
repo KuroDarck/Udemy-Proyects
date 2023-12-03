@@ -59,7 +59,7 @@ public class MasterMind1 {
             //bucle comparador de código con la entrada del usuario
             for (int i = 0; i < LARGO_CODIGO; i++) {
                 for (int j = 0; j < LARGO_CODIGO; j++) {
-                    if ( codgoIngresado.charAt(j) == codigo[i]) {
+                    if (codgoIngresado.charAt(j) == codigo[i]) {
                         if (j == i) {
                             acierto++;
                         } else {
@@ -75,7 +75,7 @@ public class MasterMind1 {
             contador++;
         } while (contador < MAX_INTENTOS);
 
-        System.out.println("!Oh no, Perdiste  el Codigo era: " +codigo[0]+codigo[1]+codigo[2]+codigo[3]);
+        System.out.println("!Oh no, Perdiste  el Codigo era: " + codigo[0] + codigo[1] + codigo[2] + codigo[3]);
 
     }
 
