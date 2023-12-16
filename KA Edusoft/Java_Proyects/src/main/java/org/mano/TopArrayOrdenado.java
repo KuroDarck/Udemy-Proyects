@@ -1,6 +1,6 @@
 package org.mano;
 
-import java.util.Random;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TopArrayOrdenado {
@@ -28,7 +28,7 @@ public class TopArrayOrdenado {
      * esVacio(TopArrayOrdenado): función booleana que retornará TRUE si el arreglo está vacío, FALSE si no.
      */
     public static boolean esVacio(TopArrayOrd arrayOrd) {
-        return arrayOrd.topeArray.get() == -1;
+        return arrayOrd.topeArray.get()==0;
     }
 
     /**
@@ -94,7 +94,7 @@ public class TopArrayOrdenado {
      * El algoritmo para buscar el elemento debe ser por bipartición.
      */
     public static boolean existe(int a, TopArrayOrd arrayOrd) {
-        for (int i = 0; i < arrayOrd.topeArray.get(); i++) {
+        for (int i = 0; i < arrayOrd.topeArray.get() - 1; i++) {
             if (arrayOrd.arrayOrdenado[i] == a) {
                 return true;
             }
@@ -128,16 +128,15 @@ public class TopArrayOrdenado {
      * de manera ordenada, por tanto, el arreglo con tope sería [4,4,4,5,6,8,9] y, en consecuencia, el retorno sería [0,1,2].
      */
     public static int[] indice(int a, TopArrayOrd arrayOrd) {
-        int[] temporal = new int[0];
         int contador = 0;
+        int[] temporal = new int[ocurrencias(a, arrayOrd)];
         for (int i = 0; i < arrayOrd.topeArray.get(); i++) {
             if (arrayOrd.arrayOrdenado[i] == a) {
                 temporal[contador] = i;
                 contador++;
             }
         }
-
-        return new int[]{};
+        return temporal;
     }
 
     /**
@@ -146,15 +145,28 @@ public class TopArrayOrdenado {
      * Si no existe en el arreglo el valor indicado esta operación no hace nada.
      */
     public static void eliminarPrimera(int a, TopArrayOrd arrayOrd) {
-
+        int[] p = indice(a, arrayOrd);
+        if (p.length != 0) {
+            for (int i = p[0]; i < arrayOrd.topeArray.get(); i++) {
+                arrayOrd.arrayOrdenado[i] = arrayOrd.arrayOrdenado[i + 1];
+            }
+            arrayOrd.topeArray.set(arrayOrd.topeArray.get() - 1);
+        }
     }
 
     /**
-     * eliminarUltimo(int, TopArrayOrdenado): Ídem anterior pero eliminando la última ocurrencia del número indicado.
+     * eliminarUltimo(int, TopArrayOrdenado): idéntico anterior pero eliminando la última ocurrencia del número indicado.
      */
     public static void eliminarUltimo(int a, TopArrayOrd arrayOrd) {
-
-
+        int[] p = indice(a, arrayOrd);
+        int ultimo = p.length;
+        System.out.println("EliminarUltimo =" + p[ultimo - 1]);
+        if (p[ultimo - 1] != 0) {
+            for (int i = p[ultimo - 1]; i < arrayOrd.topeArray.get(); i++) {
+                arrayOrd.arrayOrdenado[i] = arrayOrd.arrayOrdenado[i + 1];
+            }
+            arrayOrd.topeArray.set(arrayOrd.topeArray.get() - 1);
+        }
     }
 
     /**
@@ -164,11 +176,49 @@ public class TopArrayOrdenado {
         for (int i = 0; i < arrayOrd.topeArray.get(); i++) {
             arrayOrd.arrayOrdenado[i] = 0;
         }
+        arrayOrd.topeArray.set(0);
     }
 
-    //comienzo del main program
+    //comienzo del main program // donde puede probar
     public static void main(String[] args) {
+        // Prueba de iniciarArreglo
+        TopArrayOrd array = iniciarArreglo(5);
 
+        // Prueba de esVacio y esLleno
+        System.out.println("¿Es vacío? " + esVacio(array));  // Debería imprimir FALSE
 
+        System.out.println("¿Es lleno? " + esLleno(array));   // Debería imprimir FALSE
+
+        // Prueba de cantidadMaxima
+        System.out.println("Cantidad máxima: " + cantidadMaxima(array));  // Debería imprimir 5
+
+        // Prueba de add y cantidad
+        add(3, array);
+        add(1, array);
+        add(5, array);
+        System.out.println("Cantidad de elementos: " + cantidad(array));  // Debería imprimir 3
+
+        // Prueba de existe
+        System.out.println("¿Existe el número 3? " + existe(3, array));  // Debería imprimir TRUE
+        System.out.println("¿Existe el número 2? " + existe(2, array));  // Debería imprimir FALSE
+
+        // Prueba de ocurrencias
+        System.out.println("Ocurrencias del número 3: " + ocurrencias(3, array));  // Debería imprimir 1
+
+        // Prueba de índices
+        int[] indices = indice(3, array);
+        System.out.println("Índices del número 3: " + Arrays.toString(indices));// Debería imprimir "Índices del número 3: 3"
+
+        // Prueba de eliminarPrimera
+        eliminarPrimera(3, array);
+        System.out.println("Después de eliminar la primera ocurrencia del 3, cantidad: " + cantidad(array));  // Debería imprimir 2
+
+        // Prueba de eliminarUltimo
+        eliminarUltimo(5, array);
+        System.out.println("Después de eliminar la última ocurrencia del 5, cantidad: " + cantidad(array));  // Debería imprimir 1
+
+        // Prueba de vaciar
+        vaciar(array);
+        System.out.println("Después de vaciar, ¿es vacío? " + esVacio(array));  // Debería imprimir TRUE
     }
 }
