@@ -3,7 +3,7 @@ package org.mano;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MasterMind1 {
+public class EMasterMind1 {
 
     public static void main(String[] args) {
 
